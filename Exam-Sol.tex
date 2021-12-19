@@ -1,0 +1,115 @@
+% !TEX program = pdflatex -> bibtex -> pdflatex*2
+\documentclass{assignment}
+\ProjectInfos{高等线性代数}{PHYS6653P}{2019-2020 学年}{期末考试}{}{陈稼霖}[https://github.com/Chen-Jialin]{SA21038052}
+
+\begin{document}
+\begin{prob}
+    群 $G$, 群元 $a,b$, 定义共轭为: 若 $a$ 与 $b$ 共轭, 则 $\exists g\in G$, s.t. $b=g^{-1}ag$. 证明: 共轭是一个等价关系.
+\end{prob}
+\begin{pf}
+    
+\end{pf}
+
+\begin{prob}
+    向量空间中四个元素
+    \[
+        I=\begin{pmatrix}
+            1&0\\
+            0&1
+        \end{pmatrix},\quad\sigma_x=\begin{pmatrix}
+            0&1\\
+            1&0
+        \end{pmatrix},\quad\sigma_y=\begin{pmatrix}
+            0&-i\\
+            i&0
+        \end{pmatrix},\quad\sigma_z=\begin{pmatrix}
+            1&0\\
+            0&-1
+        \end{pmatrix}.
+    \]
+    \begin{itemize}
+        \item[(1)] 证明 $I,\sigma_x,\sigma_y,\sigma_z$ 是线性无关的.
+        \item[(2)] 证明对任意自伴随、迹为 $1$ 的矩阵 $A$, 可以写成 $A=\frac{1}{2}(I+a\sigma_x+b\sigma_y+c\sigma_z)$ 的形式, 其中 $a,b,c$ 为实数, $a^2+b^2+c^2\leq 1$. 特别地, 当 $A$ 的秩为 $1$ 时, $a^2+b^2+c^2=1$.
+    \end{itemize}
+\end{prob}
+\begin{pf}
+    \begin{itemize}
+        \item[(1)] 
+        \item[(2)] 
+    \end{itemize}
+\end{pf}
+
+\begin{prob}
+    $V$ 为向量空间, $\tau\in\mathcal{L}(V)$, $\mathcal{E}=\{e_1,e_2,e_3\}$ 为一组标准基, 且
+    \[
+        \begin{array}{l}
+            \tau(e_1)=e_1+e_2\\
+            \tau(e_2)=e_2+e_3\\
+            \tau(e_3)=e_3+e_1
+        \end{array}
+    \]
+    \begin{itemize}
+        \item[(1)] 求标准基 $\mathcal{E}$ 下 $\tau$ 的矩阵表示 $[\tau]_{\mathcal{E}}$.
+        \item[(2)] 若另一组基在标准基下表示为 $\mathcal{B}=\{(1,0,0),(1,1,0),(1,1,1)\}$, 求 $\tau$ 在 $\mathcal{B}$ 下的表示 $[\tau]_{\mathcal{B}}$.
+        \item[(3)] 写出 $\tau$ 的极小多项式, 并写出其有理标准型. 再写出域为复时的约当标准型.
+    \end{itemize}
+\end{prob}
+\begin{sol}
+    \begin{itemize}
+        \item[(1)] 
+        \item[(2)] 
+        \item[(3)] 
+    \end{itemize}
+\end{sol}
+
+\begin{prob}
+    映射 $f:M_1\rightarrow M_2$
+    \begin{itemize}
+        \item[(1)] 证明 $f$ 是连续的当且仅当闭集的原像集也是闭的.
+        \item[(2)] 若 $f$ 等距, $(x_n)$ 是 $M_1$ 中的柯西列, 证明 $f((x_n))$ 也是柯西列.
+    \end{itemize}
+\end{prob}
+\begin{sol}
+    \begin{itemize}
+        \item[(a)] 
+        \item[(b)] 
+    \end{itemize}
+\end{sol}
+
+\begin{prob}
+    $V$ 是有限维内积向量空间, $\tau\in\mathcal{L}(V)$
+    \begin{itemize}
+        \item[(a)] 若 $A$ 是非空子集, 证明 $A^{\perp}$ 是完备的.
+        \item[(b)] 设 $\tau=\lambda_1\rho_1+\lambda_2\rho_2+\cdots+\lambda_k\rho_k$, 其中 $\rho_1+\rho_2+\cdots+\rho_k=I$ 是单位分解. 证明:
+        \[
+            f(\tau)=f(\lambda_1)\rho_1+f(\lambda_2)\rho_2+\cdots+f(\lambda_k)\rho_k.
+        \]
+        \item[(c)] 证明 $V$ 的线性算子都是有界的.
+        \item[(d)] 求酉算子的范数.
+        \item[(e)] 证明 $\tau$ 是半正定的当且仅当 $\exists\sigma\in\mathcal{L}(V)$, s.t. $\tau=\sigma^*\sigma$, 并说明 $\sigma$ 不是唯一的.
+    \end{itemize}
+\end{prob}
+\begin{sol}
+    \begin{itemize}
+        \item[(a)] 
+        \item[(b)] 
+        \item[(c)] 
+        \item[(d)] 
+        \item[(e)] 
+    \end{itemize}
+\end{sol}
+
+\begin{prob}
+    $H$ 是希尔伯特空间, $B$ 是其有界算子的集合, 证明
+    \begin{itemize}
+        \item[(a)] 若 $\tau\in B$, 则 $\ker\tau$ 是完备的.
+        \item[(b)] 若 $\tau,\sigma\in B$, 则它们的复合 $\sigma\circ\tau$ 也是有界的.
+    \end{itemize}
+\end{prob}
+\begin{pf}
+    \begin{itemize}
+        \item[(a)] 
+        \item[(b)] 
+    \end{itemize}
+\end{pf}
+\end{document}
