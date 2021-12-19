@@ -7,7 +7,14 @@
     群 $G$, 群元 $a,b$, 定义共轭为: 若 $a$ 与 $b$ 共轭, 则 $\exists g\in G$, s.t. $b=g^{-1}ag$. 证明: 共轭是一个等价关系.
 \end{prob}
 \begin{pf}
-    
+    共轭满足
+    \begin{itemize}
+        \item[(1)] \textbf{反身性}: $\forall a\in G$, 取 $g=e$, $e^{-1}ae=eae=a\Longrightarrow a$ 与 $a$ 共轭.
+        \item[(2)] \textbf{对称性}: $a$ 与 $b$ 共轭 $\Longleftrightarrow\exists g\in G$, s.t. $b=g^{-1}ag\Longleftrightarrow\exists g^{-1}\in G$, s.t. $a=gbg^{-1}=(g^{-1})^{-1}bg^{-1}\Longleftrightarrow b$ 与 $a$ 共轭.
+        \item[(3)] \textbf{传递性}: 若 $a$ 与 $b$ 共轭, $b$ 与 $c$ 共轭, 则 $\exists g_1,g_2\in G$, s.t. $b=g_1^{-1}ag_1$, $c=g_2^{-1}bg_2$.\\
+        取 $g=g_1g_2$, 则 $c=g_2^{-1}bg_2=g_2^{-1}(g_1^{-1}ag_1)g_2=(g_2^{-1}g_1^{-1})a(g_1g_2)=(g_1g_2)^{-1}a(g_1g_2)=g^{-1}ag\Longrightarrow a$ 与 $c$ 共轭.
+    \end{itemize}
+    故共轭是一个等价关系.
 \end{pf}
 
 \begin{prob}
