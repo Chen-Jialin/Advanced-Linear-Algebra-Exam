@@ -204,14 +204,15 @@
         又 $\because S_2$ 为闭集, $\therefore y_0\in S_2$, 即 $f(x_0)\in S_2$\\
         $\Longrightarrow x_0\in S_1\Longrightarrow S_1$ 为闭集.
 
-        ``$\Longleftarrow$'': $\forall y_0\in M_2$, 取含有 $y_0$ 的一个闭集 $S_2$ 以及该闭集中的一个收敛到 $y_0$ 的序列 $(y_n)$, 取 $S_2$ 的原像集 $S_1=f^{-1}(S_2)$, $S_1$ 中的序列 $(x_n)$ 满足 $y_n=f(x_n)$, $x_0\in M_1$ 满足 $f(x_0)=y_0$.\\
-        $\because S_2$ 为闭集, $\therefore y_0\in S_2$.\\
-        又 $\because f(x_0)=y_0$, $\therefore x_0\in S_1=f^{-1}(S_2)$.\\
+        ``$\Longleftarrow$''(存疑): 设闭集 $S_2\subseteq M_2$, $S_1=f^{-1}(S_2)$.\\
+        $\because S_1$ 是闭的, $\therefore S_1$ 是闭的.\\
+        假设 $f$ 不连续, 则 $\exists\epsilon>0$, $\forall\delta>0$, s.t. $f(B(x_0,\delta))\nsubseteq B(f(x_0),\epsilon)$, 即 $\exists x'\in B(x_0,\delta)$, s.t. $B(f(x'),\epsilon)$.\\
+        特别地, 取 $\delta_1$, s.t. $B(x_0,\delta_1)\subseteq S_1$, 此时, $\exists x_1\in B(x_0,\delta_1)$, s.t. $f(x_1)\notin B(f(x_0),\epsilon)$,\\
+        $\cdots$,\\
+        取 $\delta_n=\frac{\delta_1}{n}$, $\exists x_n\in B(x_0,\delta_n)$, s.t. $f(x_n)\notin B(f(x_0),\epsilon)$,\\
+        $\cdots$, 从而得到序列 $(x_n)\rightarrow x_0$, 序列 $(f(x_n))$ 不收敛至 $f(x_0)$, 与 $S_2$ 是闭的矛盾, 故假设错误, $f$ 是连续的.
 
-        假设 $f$ 不连续, 则 $\exists\epsilon>0$, $\forall\delta>0$, 都有 $f(B(x_0),\delta)\nsubseteq B(f_0,\epsilon)$, 即 $\exists x'\in B(x_0,\delta)$, s.t. $f(x')\notin B(y_0,\epsilon)$.\\
-        $\because(y_n)\rightarrow y_0$, $\therefore\forall\epsilon>0$, $\exists N_2>0$, s.t. 当 $n>N_2$ 时, $y_n=f(x_n)\in B(y_0,\epsilon)=B(f(x_0),\epsilon)$.\\
-        $\forall\epsilon>0$, $\exists\delta>0$, s.t. $f(B(x_0,\delta))\subseteq B(f(x_0),\epsilon)$.\\
-        $\because y_0=f(x_0)$ 的选取是任意的, $\therefore f$ 在 $M_1$ 上连续.
+        综上, 得证.
         \item[(b)] $\because(x_n)$ 为 $M_1$ 中的柯西列, $\therefore\forall\epsilon$, $\exists N>0$, s.t. 当 $n,m>N$ 时, $\norm{x_n-x_m}<\epsilon$.\\
         $\because f$ 等距, $\therefore\norm{f(x_n)-f(x_m)}=\norm{f(x_n-x_m)}=\norm{x_n-x_m}\Longrightarrow(f_n)$ 为 $M_2$ 中的柯西列.
     \end{itemize}
