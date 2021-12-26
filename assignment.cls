@@ -142,6 +142,7 @@
 \DeclareMathOperator{\sinc}{sinc}% 辛格函数 Sinc function
 \DeclareMathOperator{\rect}{rect}% 矩形函数 Rectangular function
 \DeclareMathOperator{\tr}{Tr}% 矩阵的迹 Trace of matrix
+\DeclareMathOperator{\rk}{rk}% 矩阵的秩 Rank of matrix
 
 % 题目和题解风格 Problem and solution style
 \ifUsingEnglish
