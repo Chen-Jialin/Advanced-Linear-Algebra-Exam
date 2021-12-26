@@ -259,8 +259,14 @@
 \end{prob}
 \begin{pf}
     \begin{itemize}
-        \item[(a)] 
-        \item[(b)] 
+        \item[(a)] 若 $\norm{\tau}=0$, 即 $\tau=0$, 则显然 $\ker\tau=H$ 是完备的, 故下面只讨论 $\norm{\tau}\neq 0$ 的情况.
+        首先证 $\ker\tau$ 是 $H$ 的子空间: $\forall u,v\in\ker\tau$, $\tau(ru+tv)=r\tau(u)+t\tau(v)=0\Longrightarrow ru+tv\in\ker\tau$, 故 $\ker\tau$ 为 $H$ 的子空间.\\
+        再证 $\ker\tau$ 是闭的: 假设 $\ker\tau$ 中收敛序列 $(x_n)$ 收敛至 $x_0$,\\
+        即 $\forall\epsilon>0$, $\exists N>0$, s.t. 当 $n>N$ 时, $\norm{x_n-x_0}\leq\epsilon$.\\
+        假设 $\norm{\tau(x_0)}\neq 0$, 则取 $\epsilon=\frac{\norm{\tau(x_0)}}{2\norm{\tau}}$, $\forall N>0$, 当 $n>N$ 时, $\norm{x_n-x_0}\geq\frac{\norm{\tau(y)}}{\norm{\tau}}>\epsilon$, 与 $(x_n)\rightarrow x_0$ 矛盾, 故假设错误, $\norm{\tau(x_0)}=0$\\
+        $\Longrightarrow\tau(x_0)=0\Longrightarrow x_0\in\ker\tau$, 故 $\ker\tau$ 是闭的.\\
+        $\because H$ 为希尔伯特空间, $\ker\tau$ 为 $H$ 的子空间且 $\ker\tau$ 是闭的, $\therefore S$ 完备.
+        \item[(b)] $\because\norm{\sigma\circ\tau(x)}=\norm{\sigma(\tau(x))}\leq\norm{\sigma}\norm{\tau(x)}\leq\norm{\sigma}\norm{\tau}\norm{x}$, $\therefore\norm{\sigma\circ\tau}=\sup_{x\neq 0}\frac{\norm{\sigma\circ\tau(x)}}{\norm{x}}\leq\sup_{x\neq 0}\norm{\sigma}\norm{\tau}=\norm{\sigma}\norm{\tau}$, 故 $\sigma\circ\tau$ 也是有界的.
     \end{itemize}
 \end{pf}
 \end{document}
