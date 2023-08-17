@@ -36,7 +36,7 @@
     \]
     \begin{itemize}
         \item[(1)] 证明 $I,\sigma_x,\sigma_y,\sigma_z$ 是线性无关的.
-        \item[(2)] 证明对任意自伴随、迹为 $1$ 的矩阵 $A$, 可以写成 $A=\frac{1}{2}(I+a\sigma_x+b\sigma_y+c\sigma_z)$ 的形式, 其中 $a,b,c$ 为实数, $a^2+b^2+c^2\leq 1$. 特别地, 当 $A$ 的秩为 $1$ 时, $a^2+b^2+c^2=1$.
+        \item[(2)] 证明对任意半正定、迹为 $1$ 的矩阵 $A$, 可以写成 $A=\frac{1}{2}(I+a\sigma_x+b\sigma_y+c\sigma_z)$ 的形式, 其中 $a,b,c$ 为实数, $a^2+b^2+c^2\leq 1$. 特别地, 当 $A$ 的秩为 $1$ 时, $a^2+b^2+c^2=1$.
     \end{itemize}
 \end{prob}
 \begin{pf}
@@ -66,7 +66,19 @@
                 a+ib&1-c
             \end{pmatrix}=\frac{1}{2}(I+a\sigma_x+b\sigma_y+c\sigma_z).
         \]
-        (其余存疑)
+        $\because A$ 半正定,
+        \begin{gather*}
+            \det(A)=\frac{1}{2^2}\begin{vmatrix}
+                1+c&a-ib\\
+                a+ib&1-c
+            \end{vmatrix}=\frac{1}{4}(1-a^2-b^2-c^2)\geq 0\\
+            \Longrightarrow a^1+b^2+c^2\leq 1.
+        \end{gather*}
+        特别地, 当 $A$ 的秩为 $1$ 时,
+        \begin{gather}
+            \frac{1-c}{a-ib}=\frac{a+ib}{1-c},\\
+            \Longrightarrow a^2+b^2+c^2=1.
+        \end{gather}
     \end{itemize}
 \end{pf}
 
@@ -168,7 +180,7 @@
         $(x-2)$, $\left(x-\frac{1+i\sqrt{3}}{2}\right)$ 和 $\left(x-\frac{1-i\sqrt{3}}{2}\right)$ 的阶为 $1$ 的约当块分别为
         \begin{align}
             g(2,1)=\begin{pmatrix}
-                1
+                2
             \end{pmatrix},\quad g\left(\frac{1+i\sqrt{3}}{2},1\right)=\begin{pmatrix}
                 \frac{1+i\sqrt{3}}{2}
             \end{pmatrix},\quad g\left(\frac{1-i\sqrt{3}}{2},1\right)=\begin{pmatrix}
@@ -239,7 +251,7 @@
         \item[(b)] 展开 $f$ 得 $f(x)=\sum_{n=0}^{\infty}\frac{f^{(n)}(0)}{n!}x^n$\\
         $\Longrightarrow f(\tau)=\sum_{n=0}^{\infty}\frac{f^{n}(0)}{n!}\tau^n$, 其中 $\tau^n=(\lambda_1\rho_1+\cdots+\lambda_k\rho_k)^n=\lambda_1^n\rho_1+\cdots+\lambda_k^n\rho_k$,\\
         故 $f(\tau)=\sum_{n=0}^{\infty}\frac{f^{(n)}(0)}{n!}(\lambda_1^n\rho_1+\cdots+\lambda_k^n\rho_k)=\sum_{n=0}^{\infty}\frac{f^{(n)}(0)}{n!}\lambda_1^n\rho_1+\cdots+\sum_{n=0}^{\infty}\frac{f^{(n)}(0)}{n!}\lambda_k^n\rho_k=f(\lambda_1)\rho_1+\cdots+f(\lambda_k)\rho_k$.
-        \item[(c)] $\forall x_0\in V$, $\forall\epsilon>0$, $\exists\delta>0$, s.t. $\forall x\in B(x_0,\epsilon)$, 即 $\norm{x-x_0}<\delta$, 有 $\norm{f(x)-f(x_0)}=\norm{f(x-x_0)}\leq\epsilon$, 即
+        \item[(c)] $\sup_{0\neq x\in V}\frac{\norm{\tau(x)}}{\norm{x}}=\sup_{\norm{x}=1}\norm{\tau(x)}<\infty$, 故得证.
         \item[(d)] 设 $\tau\in\mathcal{L}(V)$ 为酉算子, 则 $\tau$ 等距.\\
         $\norm{\tau}=\sup_{\norm{x}=1}\norm{\tau(x)}=\sup_{\norm{x}=1}\norm{x}=1$.
         \item[(e)] ``$\Longrightarrow$'': $\because\tau$ 是半正定的, $\therefore$ 可设 $\tau$ 的正交谱分解 $\tau=\lambda_1\rho_1+\lambda_k\rho_k$ (其中 $0\leq\lambda_i\in\mathbb{R}\forall i$), 并取 $\sigma=\sqrt{\tau}=\sqrt{\lambda_1}\rho_1+\cdots+\sqrt{\lambda_k}\rho_k$.\\
@@ -264,10 +276,15 @@
         首先证 $\ker\tau$ 是 $H$ 的子空间: $\forall u,v\in\ker\tau$, $\tau(ru+tv)=r\tau(u)+t\tau(v)=0\Longrightarrow ru+tv\in\ker\tau$, 故 $\ker\tau$ 为 $H$ 的子空间.\\
         再证 $\ker\tau$ 是闭的: 假设 $\ker\tau$ 中收敛序列 $(x_n)$ 收敛至 $x_0$,\\
         即 $\forall\epsilon>0$, $\exists N>0$, s.t. 当 $n>N$ 时, $\norm{x_n-x_0}\leq\epsilon$.\\
-        假设 $\norm{\tau(x_0)}\neq 0$, 则取 $\epsilon=\frac{\norm{\tau(x_0)}}{2\norm{\tau}}$, $\forall N>0$, 当 $n>N$ 时, $\norm{x_n-x_0}\geq\frac{\norm{\tau(y)}}{\norm{\tau}}>\epsilon$, 与 $(x_n)\rightarrow x_0$ 矛盾, 故假设错误, $\norm{\tau(x_0)}=0$\\
+        假设 $\norm{\tau(x_0)}\neq 0$, 则取 $\epsilon=\frac{\norm{\tau(x_0)}}{2\norm{\tau}}$, $\forall N>0$, 当 $n>N$ 时, $\norm{x_n-x_0}\geq\frac{\norm{\tau(x_0)}}{\norm{\tau}}>\epsilon$, 与 $(x_n)\rightarrow x_0$ 矛盾, 故假设错误, $\norm{\tau(x_0)}=0$\\
         $\Longrightarrow\tau(x_0)=0\Longrightarrow x_0\in\ker\tau$, 故 $\ker\tau$ 是闭的.\\
         $\because H$ 为希尔伯特空间, $\ker\tau$ 为 $H$ 的子空间且 $\ker\tau$ 是闭的, $\therefore S$ 完备.
         \item[(b)] $\because\norm{\sigma\circ\tau(x)}=\norm{\sigma(\tau(x))}\leq\norm{\sigma}\norm{\tau(x)}\leq\norm{\sigma}\norm{\tau}\norm{x}$, $\therefore\norm{\sigma\circ\tau}=\sup_{x\neq 0}\frac{\norm{\sigma\circ\tau(x)}}{\norm{x}}\leq\sup_{x\neq 0}\norm{\sigma}\norm{\tau}=\norm{\sigma}\norm{\tau}$, 故 $\sigma\circ\tau$ 也是有界的.
     \end{itemize}
 \end{pf}
+
+\begin{prob}
+    写出 $(x-1)^2(x^2+x+1)$ 的 $2$ 个有理标准型 ($F=\mathbb{R}$) 和 $2$ 个约当标准型 ($F=\mathbb{C}$).\\
+    $F$
+\end{prob}
 \end{document}
